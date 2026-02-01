@@ -9,7 +9,7 @@ A decentralized voting platform built on Ethereum blockchain for conducting secu
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -24,7 +24,7 @@ A decentralized voting platform built on Ethereum blockchain for conducting secu
 
 ---
 
-## 🌟 Overview
+## Overview
 
 This project implements a blockchain-based voting system that ensures:
 - **Security:** Cryptographic protection against tampering
@@ -42,37 +42,37 @@ Perfect for:
 
 ---
 
-## ✨ Features
+## Features
 
 ### Smart Contract
-- ✅ Create and manage multiple elections
-- ✅ Add candidates with party affiliations
-- ✅ Register eligible voters by wallet address
-- ✅ Time-based election control (start/end times)
-- ✅ Prevent double voting
-- ✅ Automatic winner calculation
-- ✅ Comprehensive event logging
+- Create and manage multiple elections
+- Add candidates with party affiliations
+- Register eligible voters by wallet address
+- Time-based election control (start/end times)
+- Prevent double voting
+- Automatic winner calculation
+- Comprehensive event logging
 
 ### Frontend
-- ✅ Modern, responsive UI with Tailwind CSS
-- ✅ MetaMask wallet integration
-- ✅ Real-time vote counting
-- ✅ Admin dashboard for election management
-- ✅ Voter dashboard for casting votes
-- ✅ Results page with winner display
-- ✅ Election history and audit trail
-- ✅ Transaction status notifications
+- Modern, responsive UI with Tailwind CSS
+- MetaMask wallet integration
+- Real-time vote counting
+- Admin dashboard for election management
+- Voter dashboard for casting votes
+- Results page with winner display
+- Election history and audit trail
+- Transaction status notifications
 
 ### Security
-- ✅ Access control modifiers
-- ✅ Input validation
-- ✅ Reentrancy protection
-- ✅ Integer overflow protection (Solidity 0.8+)
-- ✅ Time-based restrictions
+- Access control modifiers
+- Input validation
+- Reentrancy protection
+- Integer overflow protection (Solidity 0.8+)
+- Time-based restrictions
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Blockchain
 - **Solidity** - Smart contract development
@@ -93,7 +93,7 @@ Perfect for:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────┐
@@ -166,7 +166,7 @@ This command will start a local Ethereum network:
 - Creates 20 test accounts, each with 10,000 ETH
 - Displays account addresses and private keys
 
-**⚠️ Important: Keep this terminal running!**
+**Important: Keep this terminal running!**
 
 #### Step 3: Deploy Smart Contract
 
@@ -187,7 +187,7 @@ Contract ABI and address saved to frontend/src/contracts/VotingContract.json
 Deployed by: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 ```
 
-**📝 Note:** Save the contract address and admin address.
+**Note:** Save the contract address and admin address.
 
 #### Step 4: Configure MetaMask
 
@@ -240,11 +240,11 @@ npm run dev
 1. **Open browser** and go to: `http://localhost:5173`
 2. **Click "Connect Wallet" button**
 3. **Approve connection in MetaMask**
-4. **You're ready! 🎉**
+4. **You're ready!**
 
 ---
 
-## 🚀 How to Use
+## How to Use
 
 ### As Admin (Account #0)
 
@@ -280,7 +280,7 @@ npm run dev
 - View candidates
 - Click **"Vote"** button for your preferred candidate
 - Approve transaction in MetaMask
-- ✅ Success message will appear!
+- Success message will appear!
 
 #### 3. View Results
 - Navigate to **Results** page
@@ -290,7 +290,7 @@ npm run dev
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Run Smart Contract Tests
 
@@ -318,7 +318,7 @@ npx hardhat test
 
 ---
 
-## 📝 Available Commands
+## Available Commands
 
 ### Backend (from Root Directory)
 ```bash
@@ -338,7 +338,7 @@ npm run preview       # Preview production build
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Issue: "Cannot connect to MetaMask"
 **Solution:**
@@ -376,7 +376,7 @@ npm run dev
 
 ---
 
-## 📚 Project Structure
+## Project Structure
 
 ### Admin Workflow
 
@@ -415,7 +415,7 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Blockchain Voting Platform/
@@ -455,7 +455,7 @@ Blockchain Voting Platform/
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - **[Project Report](docs/PROJECT_REPORT.md)** - Complete final year project documentation
 - **[Viva Questions](docs/VIVA_QUESTIONS.md)** - 30+ questions with detailed answers
@@ -463,7 +463,7 @@ Blockchain Voting Platform/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Run comprehensive test suite:
 
@@ -484,7 +484,7 @@ Expected output:
 
 ---
 
-## 🔒 Security Features
+## Security Features
 
 - **Access Control:** Admin-only functions for election management
 - **Double Voting Prevention:** Mapping-based voter tracking
@@ -495,7 +495,7 @@ Expected output:
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### Local Development
 ```bash
@@ -512,7 +512,7 @@ See [Deployment Guide](docs/DEPLOYMENT_GUIDE.md) for detailed instructions.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Please:
 
@@ -524,13 +524,13 @@ Contributions welcome! Please:
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🎓 Academic Use
+## Academic Use
 
 This project is designed for educational purposes and final year projects. It demonstrates:
 - Blockchain application development
@@ -542,7 +542,7 @@ This project is designed for educational purposes and final year projects. It de
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Ethereum Foundation for blockchain technology
 - Hardhat team for development tools
@@ -552,7 +552,7 @@ This project is designed for educational purposes and final year projects. It de
 
 ---
 
-## 📧 Contact
+## Contact
 
 For questions or support:
 - Open an issue on GitHub
@@ -560,7 +560,7 @@ For questions or support:
 
 ---
 
-## 🔗 Useful Links
+## Useful Links
 
 - [Ethereum Documentation](https://ethereum.org/developers)
 - [Solidity Documentation](https://docs.soliditylang.org/)
@@ -573,4 +573,4 @@ For questions or support:
 
 **Made with ❤️ for decentralized democracy**
 
-🗳️ **Vote with confidence. Vote on blockchain.**
+**Vote with confidence. Vote on blockchain.**

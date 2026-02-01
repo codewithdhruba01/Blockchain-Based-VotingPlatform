@@ -467,7 +467,3 @@ For issues or questions:
 2. Review error messages in browser console
 3. Check MetaMask for transaction details
 4. Verify all prerequisites are installed
-
----
-
-**Happy Deploying! 🚀**
