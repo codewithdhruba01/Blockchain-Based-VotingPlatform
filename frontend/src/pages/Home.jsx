@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useWeb3 } from '../context/Web3Context';
 
+import { FAQSection } from '../components/FAQSection';
 const Home = () => {
     const { account, connectWallet } = useWeb3();
 
@@ -180,6 +181,10 @@ const Home = () => {
                 </div>
             </div>
 
+
+            {/* FAQ Section */}
+            <FAQSection />
+
             {/* CTA Section */}
             <div className="bg-primary-700">
                 <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
@@ -209,7 +214,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
