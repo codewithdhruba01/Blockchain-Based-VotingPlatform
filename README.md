@@ -120,66 +120,66 @@ Perfect for:
 
 ---
 
-## 📦 Installation & Setup (इंस्टॉलेशन और सेटअप)
+## 📦 Installation & Setup
 
-### Prerequisites (आवश्यक चीजें)
-- Node.js (v16+) - [Download करें](https://nodejs.org/)
-- npm (Node.js के साथ आता है)
-- MetaMask Browser Extension - [Install करें](https://metamask.io/)
+### Prerequisites
+- Node.js (v16 or higher) - [Download](https://nodejs.org/)
+- npm (comes with Node.js)
+- MetaMask Browser Extension - [Install](https://metamask.io/)
 
-### Step-by-Step Setup (चरण-दर-चरण सेटअप)
+### Step-by-Step Setup
 
-#### Step 1: Dependencies Install करें
+#### Step 1: Install Dependencies
 
 ```bash
-# Project की root directory में जाएं
+# Navigate to project root directory
 cd "/home/dhrubaraj-pati/Desktop/Blockchain Voting Platform"
 
-# Backend dependencies install करें
+# Install backend dependencies
 npm install
 
-# Frontend dependencies install करें
+# Install frontend dependencies
 cd frontend
 npm install
 
-# Tailwind CSS install करें (अगर नहीं है तो)
+# Install Tailwind CSS (if not already installed)
 npm install -D tailwindcss postcss autoprefixer
 
-# Root directory में वापस आएं
+# Return to root directory
 cd ..
 ```
 
-#### Step 2: Local Blockchain Start करें
+#### Step 2: Start Local Blockchain
 
-**Terminal 1 खोलें:**
+**Open Terminal 1:**
 ```bash
-# Local Hardhat network start करें
+# Start local Hardhat network
 npm run node
 
-# या
+# OR
 npx hardhat node
 ```
 
-यह command एक local Ethereum network start करेगा:
+This command will start a local Ethereum network:
 - URL: `http://127.0.0.1:8545`
 - Chain ID: `1337`
-- 20 test accounts बनाएगा, हर एक में 10,000 ETH होगा
-- Account addresses और private keys display होंगे
+- Creates 20 test accounts, each with 10,000 ETH
+- Displays account addresses and private keys
 
-**⚠️ Important: इस terminal को running रखें!**
+**⚠️ Important: Keep this terminal running!**
 
-#### Step 3: Smart Contract Deploy करें
+#### Step 3: Deploy Smart Contract
 
-**Terminal 2 खोलें:**
+**Open Terminal 2:**
 ```bash
-# Contract को local network पर deploy करें
+# Deploy contract to local network
 npm run deploy:local
 
-# या
+# OR
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-**Output देखेंगे:**
+**Expected Output:**
 ```
 Deploying VotingContract...
 VotingContract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
@@ -187,43 +187,43 @@ Contract ABI and address saved to frontend/src/contracts/VotingContract.json
 Deployed by: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 ```
 
-**📝 Note:** Contract address और admin address को note कर लें।
+**📝 Note:** Save the contract address and admin address.
 
-#### Step 4: MetaMask Configure करें
+#### Step 4: Configure MetaMask
 
-1. **MetaMask Extension खोलें**
-2. **Network dropdown (ऊपर बीच में) पर क्लिक करें**
-3. **"Add Network" → "Add a network manually" पर क्लिक करें**
-4. **Network details भरें:**
+1. **Open MetaMask Extension**
+2. **Click network dropdown** (top center)
+3. **Click "Add Network" → "Add a network manually"**
+4. **Enter network details:**
    - Network Name: `Hardhat Local`
    - RPC URL: `http://127.0.0.1:8545`
    - Chain ID: `1337`
    - Currency Symbol: `ETH`
-5. **"Save" पर क्लिक करें**
+5. **Click "Save"**
 
-#### Step 5: Test Accounts Import करें MetaMask में
+#### Step 5: Import Test Accounts to MetaMask
 
-Terminal 1 (जहां `hardhat node` चल रहा है) से:
+From Terminal 1 (where `hardhat node` is running):
 
-1. **कोई भी private key copy करें** (Account #0, #1, #2)
-2. **MetaMask में:**
-   - Account icon पर क्लिक करें
-   - "Import Account" select करें
-   - Private key paste करें
-   - "Import" पर क्लिक करें
+1. **Copy any private key** (Account #0, #1, #2)
+2. **In MetaMask:**
+   - Click account icon
+   - Select "Import Account"
+   - Paste private key
+   - Click "Import"
 
-**Recommended:** कम से कम 3 accounts import करें:
-- **Account #0:** Admin के लिए
-- **Account #1-2:** Voters के लिए
+**Recommended:** Import at least 3 accounts:
+- **Account #0:** For Admin
+- **Account #1-2:** For Voters
 
-#### Step 6: Frontend Start करें
+#### Step 6: Start Frontend
 
-**Terminal 3 खोलें:**
+**Open Terminal 3:**
 ```bash
-# Frontend directory में जाएं
+# Navigate to frontend directory
 cd frontend
 
-# Development server start करें
+# Start development server
 npm run dev
 ```
 
@@ -235,70 +235,70 @@ npm run dev
   ➜  Network: use --host to expose
 ```
 
-#### Step 7: Application Open करें
+#### Step 7: Open Application
 
-1. **Browser खोलें** और जाएं: `http://localhost:5173`
-2. **"Connect Wallet" button पर क्लिक करें**
-3. **MetaMask में connection approve करें**
-4. **आप तैयार हैं! 🎉**
+1. **Open browser** and go to: `http://localhost:5173`
+2. **Click "Connect Wallet" button**
+3. **Approve connection in MetaMask**
+4. **You're ready! 🎉**
 
 ---
 
-## 🚀 How to Use (कैसे इस्तेमाल करें)
+## 🚀 How to Use
 
-### Admin के रूप में (Account #0)
+### As Admin (Account #0)
 
-#### 1. Election बनाएं
-- **Admin Dashboard** पर जाएं
-- Election का नाम भरें (जैसे: "Student Council Election 2026")
-- Start time और end time select करें
-- **"Create Election"** पर क्लिक करें
-- MetaMask में transaction approve करें
+#### 1. Create Election
+- Navigate to **Admin Dashboard**
+- Enter election name (e.g., "Student Council Election 2026")
+- Select start time and end time
+- Click **"Create Election"**
+- Approve transaction in MetaMask
 
-#### 2. Candidates Add करें
-- Election select करें
-- Candidate का नाम और party भरें
-- **"Add Candidate"** पर क्लिक करें
-- Transaction approve करें
-- 3-4 candidates add करें
+#### 2. Add Candidates
+- Select the election
+- Enter candidate name and party
+- Click **"Add Candidate"**
+- Approve transaction
+- Add 3-4 candidates
 
-#### 3. Voters Register करें
-- Election select करें
-- Voter का wallet address paste करें (MetaMask से)
-- **"Register Voter"** पर क्लिक करें
-- Transaction approve करें
+#### 3. Register Voters
+- Select the election
+- Paste voter's wallet address (from MetaMask)
+- Click **"Register Voter"**
+- Approve transaction
 
-### Voter के रूप में (Account #1 या #2)
+### As Voter (Account #1 or #2)
 
-#### 1. MetaMask में Account Switch करें
-- MetaMask account icon पर क्लिक करें
-- Voter account select करें (जो registered है)
+#### 1. Switch Account in MetaMask
+- Click MetaMask account icon
+- Select voter account (that is registered)
 
-#### 2. Vote Cast करें
-- **Voter Dashboard** पर जाएं
-- Active election select करें
-- Candidates देखें
-- अपने पसंदीदा candidate के लिए **"Vote"** button पर क्लिक करें
-- MetaMask में transaction approve करें
-- ✅ Success message मिलेगा!
+#### 2. Cast Vote
+- Navigate to **Voter Dashboard**
+- Select active election
+- View candidates
+- Click **"Vote"** button for your preferred candidate
+- Approve transaction in MetaMask
+- ✅ Success message will appear!
 
-#### 3. Results देखें
-- **Results** page पर जाएं
-- Election select करें
-- Vote counts और winner देखें
+#### 3. View Results
+- Navigate to **Results** page
+- Select election
+- View vote counts and winner
 - Real-time results!
 
 ---
 
-## 🧪 Testing (टेस्टिंग)
+## 🧪 Testing
 
-### Smart Contract Tests चलाएं
+### Run Smart Contract Tests
 
 ```bash
-# Root directory में
+# In root directory
 npm test
 
-# या
+# OR
 npx hardhat test
 ```
 
@@ -318,65 +318,65 @@ npx hardhat test
 
 ---
 
-## 📝 Available Commands (उपलब्ध Commands)
+## 📝 Available Commands
 
-### Backend (Root Directory से)
+### Backend (from Root Directory)
 ```bash
-npm run node          # Local blockchain start करें
-npm run compile       # Smart contracts compile करें
-npm test              # Tests चलाएं
-npm run deploy:local  # Local network पर deploy करें
-npm run clean         # Build artifacts clean करें
+npm run node          # Start local blockchain
+npm run compile       # Compile smart contracts
+npm test              # Run tests
+npm run deploy:local  # Deploy to local network
+npm run clean         # Clean build artifacts
 ```
 
-### Frontend (frontend/ Directory से)
+### Frontend (from frontend/ Directory)
 ```bash
-npm run dev           # Development server start करें
-npm run build         # Production build बनाएं
-npm run preview       # Production build preview करें
+npm run dev           # Start development server
+npm run build         # Build for production
+npm run preview       # Preview production build
 ```
 
 ---
 
-## 🔧 Troubleshooting (समस्या समाधान)
+## 🔧 Troubleshooting
 
-### समस्या: "Cannot connect to MetaMask"
-**समाधान:**
-- MetaMask installed और unlocked है check करें
-- Page refresh करें
-- Browser cache clear करें
+### Issue: "Cannot connect to MetaMask"
+**Solution:**
+- Ensure MetaMask is installed and unlocked
+- Refresh the page
+- Clear browser cache
 
-### समस्या: "Transaction failed"
-**कारण और समाधान:**
-1. **Voter registered नहीं है** → Admin से register कराएं
-2. **पहले से vote कर चुके हैं** → हर voter सिर्फ एक बार vote कर सकता है
-3. **Election active नहीं है** → Start/end time check करें
-4. **Wrong network** → MetaMask में "Hardhat Local" network select करें
+### Issue: "Transaction failed"
+**Possible Causes and Solutions:**
+1. **Voter not registered** → Get registered by admin
+2. **Already voted** → Each voter can only vote once
+3. **Election not active** → Check start/end time
+4. **Wrong network** → Select "Hardhat Local" network in MetaMask
 
-### समस्या: "Contract not found"
-**समाधान:**
+### Issue: "Contract not found"
+**Solution:**
 ```bash
-# Contract फिर से deploy करें
+# Redeploy the contract
 npm run deploy:local
 ```
 
-### समस्या: Frontend नहीं खुल रहा
-**समाधान:**
+### Issue: Frontend not opening
+**Solution:**
 ```bash
-# Frontend directory में जाएं
+# Navigate to frontend directory
 cd frontend
 
-# Dependencies फिर से install करें
+# Reinstall dependencies
 rm -rf node_modules package-lock.json
 npm install
 
-# Server start करें
+# Start server
 npm run dev
 ```
 
 ---
 
-## 📚 Project Structure (प्रोजेक्ट की संरचना)
+## 📚 Project Structure
 
 ### Admin Workflow
 
