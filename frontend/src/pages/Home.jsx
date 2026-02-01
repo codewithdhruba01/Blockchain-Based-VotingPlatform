@@ -6,96 +6,206 @@ const Home = () => {
     const { account, connectWallet } = useWeb3();
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-gray-50 font-sans">
             {/* Hero Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                        Decentralized Voting Platform
-                    </h1>
-                    <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                        Secure, transparent, and tamper-proof elections powered by blockchain technology.
-                        Vote with confidence knowing your voice truly counts.
+            <div className="relative bg-white overflow-hidden">
+                <div className="max-w-7xl mx-auto">
+                    <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                        <svg
+                            className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+                            fill="currentColor"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                        >
+                            <polygon points="50,0 100,0 50,100 0,100" />
+                        </svg>
+
+                        <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                            <div className="sm:text-center lg:text-left">
+                                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                                    <span className="block xl:inline">Decentralized</span>{' '}
+                                    <span className="block text-primary-600 xl:inline">Voting Platform</span>
+                                </h1>
+                                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                    Secure, transparent, and tamper-proof elections powered by blockchain technology.
+                                    Experience the future of democracy with our decentralized voting system.
+                                </p>
+                                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                    {!account ? (
+                                        <div className="rounded-md shadow">
+                                            <button
+                                                onClick={connectWallet}
+                                                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 md:py-4 md:text-lg transition-all duration-300 transform hover:scale-105"
+                                            >
+                                                Get Started - Connect Wallet
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <div className="flex space-x-4">
+                                            <div className="rounded-md shadow">
+                                                <Link
+                                                    to="/voter"
+                                                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 md:py-4 md:text-lg transition-all duration-300 transform hover:scale-105"
+                                                >
+                                                    Cast Your Vote
+                                                </Link>
+                                            </div>
+                                            <div className="rounded-md shadow">
+                                                <Link
+                                                    to="/results"
+                                                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-700 bg-primary-100 hover:bg-primary-200 md:py-4 md:text-lg transition-all duration-300"
+                                                >
+                                                    View Results
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+                <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-primary-50">
+                    <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full flex items-center justify-center bg-gradient-to-br from-primary-500 to-indigo-600">
+                        <div className="text-white text-9xl opacity-20">🗳️</div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Features Section */}
+            <div className="py-24 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center">
+                        <h2 className="text-base text-primary-600 font-semibold tracking-wide uppercase">Features</h2>
+                        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            Why Choose BlockVote?
+                        </p>
+                        <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                            Our platform ensures integrity and transparency in every step of the election process.
+                        </p>
+                    </div>
+
+                    <div className="mt-20">
+                        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                            {/* Feature 1 */}
+                            <div className="pt-6">
+                                <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow-lg h-full hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary-500">
+                                    <div className="-mt-6">
+                                        <div>
+                                            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
+                                                <span className="text-3xl">🔒</span>
+                                            </span>
+                                        </div>
+                                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Secure & Private</h3>
+                                        <p className="mt-5 text-base text-gray-500">
+                                            Your vote is encrypted and stored securely on the blockchain. Voter anonymity is preserved while ensuring one-person-one-vote.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Feature 2 */}
+                            <div className="pt-6">
+                                <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow-lg h-full hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary-500">
+                                    <div className="-mt-6">
+                                        <div>
+                                            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
+                                                <span className="text-3xl">🔍</span>
+                                            </span>
+                                        </div>
+                                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Transparent</h3>
+                                        <p className="mt-5 text-base text-gray-500">
+                                            Every transaction is recorded on the public ledger. Results are verifiable by anyone, ensuring complete transparency.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Feature 3 */}
+                            <div className="pt-6">
+                                <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow-lg h-full hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary-500">
+                                    <div className="-mt-6">
+                                        <div>
+                                            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
+                                                <span className="text-3xl">⚡</span>
+                                            </span>
+                                        </div>
+                                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Tamper-Proof</h3>
+                                        <p className="mt-5 text-base text-gray-500">
+                                            Once a vote is cast, it's immutable. No one, not even administrators, can alter or delete votes after submission.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* How It Works Section */}
+            <div className="py-16 bg-white overflow-hidden lg:py-24">
+                <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
+                    <div className="relative">
+                        <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-12">
+                            How It Works
+                        </h2>
+                    </div>
+
+                    <div className="relative lg:grid lg:grid-cols-4 lg:gap-8 lg:items-center">
+                        {[
+                            { step: 1, title: 'Connect Wallet', desc: 'Securely link your MetaMask wallet to authenticate your identity.' },
+                            { step: 2, title: 'Get Registered', desc: 'Admin verifies your eligibility and registers you to vote.' },
+                            { step: 3, title: 'Cast Vote', desc: 'Select your preferred candidate and confirm your choice on the blockchain.' },
+                            { step: 4, title: 'View Results', desc: 'Watch real-time updates and verify the final election outcomes.' }
+                        ].map((item, index) => (
+                            <div key={index} className="relative mt-10 lg:mt-0 p-6 bg-gray-50 rounded-xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 group">
+                                <div className="flex justify-center">
+                                    <span className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary-600 text-2xl font-bold ring-4 ring-white group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+                                        {item.step}
+                                    </span>
+                                </div>
+                                <div className="mt-5 text-center">
+                                    <h3 className="text-lg leading-6 font-medium text-gray-900">{item.title}</h3>
+                                    <p className="mt-2 text-base text-gray-500">
+                                        {item.desc}
+                                    </p>
+                                </div>
+                                {index < 3 && (
+                                    <div className="hidden lg:block absolute top-14 -right-4 w-8 h-0.5 bg-gray-300 transform translate-x-1/2"></div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="bg-primary-700">
+                <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+                    <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                        <span className="block">Ready to vote?</span>
+                        <span className="block text-primary-200">Start participating in decentralized elections today.</span>
+                    </h2>
+                    <p className="mt-4 text-lg leading-6 text-primary-200">
+                        Join thousands of users who trust our platform for secure and transparent decision making.
                     </p>
-
-                    {!account ? (
-                        <button onClick={connectWallet} className="btn-primary text-lg px-8 py-3">
-                            Get Started - Connect Wallet
-                        </button>
-                    ) : (
-                        <div className="flex justify-center space-x-4">
-                            <Link to="/voter" className="btn-primary text-lg px-8 py-3">
-                                Cast Your Vote
+                    <div className="mt-8 flex justify-center">
+                        {!account ? (
+                            <button
+                                onClick={connectWallet}
+                                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-primary-50"
+                            >
+                                Connect Wallet Now
+                            </button>
+                        ) : (
+                            <Link
+                                to="/voter"
+                                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-primary-50"
+                            >
+                                Go to Voting Dashboard
                             </Link>
-                            <Link to="/results" className="btn-secondary text-lg px-8 py-3">
-                                View Results
-                            </Link>
-                        </div>
-                    )}
-                </div>
-
-                {/* Features */}
-                <div className="mt-20 grid md:grid-cols-3 gap-8">
-                    <div className="card text-center">
-                        <div className="text-4xl mb-4">🔒</div>
-                        <h3 className="text-xl font-bold mb-2">Secure & Private</h3>
-                        <p className="text-gray-600">
-                            Your vote is encrypted and stored securely on the blockchain, ensuring complete privacy.
-                        </p>
-                    </div>
-
-                    <div className="card text-center">
-                        <div className="text-4xl mb-4">🔍</div>
-                        <h3 className="text-xl font-bold mb-2">Transparent</h3>
-                        <p className="text-gray-600">
-                            All votes are recorded on the blockchain, making the process fully transparent and auditable.
-                        </p>
-                    </div>
-
-                    <div className="card text-center">
-                        <div className="text-4xl mb-4">⚡</div>
-                        <h3 className="text-xl font-bold mb-2">Tamper-Proof</h3>
-                        <p className="text-gray-600">
-                            Once cast, votes cannot be altered or deleted, ensuring the integrity of the election.
-                        </p>
-                    </div>
-                </div>
-
-                {/* How It Works */}
-                <div className="mt-20">
-                    <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
-                    <div className="grid md:grid-cols-4 gap-6">
-                        <div className="text-center">
-                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl font-bold text-primary-600">1</span>
-                            </div>
-                            <h4 className="font-semibold mb-2">Connect Wallet</h4>
-                            <p className="text-sm text-gray-600">Link your MetaMask wallet to authenticate</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl font-bold text-primary-600">2</span>
-                            </div>
-                            <h4 className="font-semibold mb-2">Get Registered</h4>
-                            <p className="text-sm text-gray-600">Admin verifies and registers eligible voters</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl font-bold text-primary-600">3</span>
-                            </div>
-                            <h4 className="font-semibold mb-2">Cast Vote</h4>
-                            <p className="text-sm text-gray-600">Select your candidate and submit your vote</p>
-                        </div>
-
-                        <div className="text-center">
-                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl font-bold text-primary-600">4</span>
-                            </div>
-                            <h4 className="font-semibold mb-2">View Results</h4>
-                            <p className="text-sm text-gray-600">See real-time results after election ends</p>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>
