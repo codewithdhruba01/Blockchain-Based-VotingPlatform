@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IconUser, IconMessageCircle, IconMinus, IconPlus } from "@tabler/icons-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
     {
@@ -35,8 +35,8 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => {
         <div
             onClick={onClick}
             className={`cursor-pointer rounded-2xl border px-6 py-4 transition-all duration-200 ${isOpen
-                    ? "bg-white border-primary-200 shadow-md ring-1 ring-primary-100"
-                    : "bg-white border-gray-200 hover:border-primary-200 hover:shadow-sm"
+                ? "bg-white border-primary-200 shadow-md ring-1 ring-primary-100"
+                : "bg-white border-gray-200 hover:border-primary-200 hover:shadow-sm"
                 }`}
         >
             <div className="flex items-center justify-between">

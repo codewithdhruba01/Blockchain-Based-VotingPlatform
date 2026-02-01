@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useWeb3 } from '../context/Web3Context';
 
 import { FAQSection } from '../components/FAQSection';
+import { FeatureSection } from '../components/FeatureSection';
 const Home = () => {
     const { account, connectWallet } = useWeb3();
 
@@ -75,74 +76,7 @@ const Home = () => {
             </div>
 
             {/* Features Section */}
-            <div className="py-24 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center">
-                        <h2 className="text-base text-primary-600 font-semibold tracking-wide uppercase">Features</h2>
-                        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                            Why Choose BlockVote?
-                        </p>
-                        <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-                            Our platform ensures integrity and transparency in every step of the election process.
-                        </p>
-                    </div>
-
-                    <div className="mt-20">
-                        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                            {/* Feature 1 */}
-                            <div className="pt-6">
-                                <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow-lg h-full hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary-500">
-                                    <div className="-mt-6">
-                                        <div>
-                                            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
-                                                <span className="text-3xl">🔒</span>
-                                            </span>
-                                        </div>
-                                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Secure & Private</h3>
-                                        <p className="mt-5 text-base text-gray-500">
-                                            Your vote is encrypted and stored securely on the blockchain. Voter anonymity is preserved while ensuring one-person-one-vote.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Feature 2 */}
-                            <div className="pt-6">
-                                <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow-lg h-full hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary-500">
-                                    <div className="-mt-6">
-                                        <div>
-                                            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
-                                                <span className="text-3xl">🔍</span>
-                                            </span>
-                                        </div>
-                                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Transparent</h3>
-                                        <p className="mt-5 text-base text-gray-500">
-                                            Every transaction is recorded on the public ledger. Results are verifiable by anyone, ensuring complete transparency.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Feature 3 */}
-                            <div className="pt-6">
-                                <div className="flow-root bg-white rounded-lg px-6 pb-8 shadow-lg h-full hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary-500">
-                                    <div className="-mt-6">
-                                        <div>
-                                            <span className="inline-flex items-center justify-center p-3 bg-primary-500 rounded-md shadow-lg">
-                                                <span className="text-3xl">⚡</span>
-                                            </span>
-                                        </div>
-                                        <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">Tamper-Proof</h3>
-                                        <p className="mt-5 text-base text-gray-500">
-                                            Once a vote is cast, it's immutable. No one, not even administrators, can alter or delete votes after submission.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <FeatureSection />
 
             {/* How It Works Section */}
             <div className="py-16 bg-white overflow-hidden lg:py-24">
