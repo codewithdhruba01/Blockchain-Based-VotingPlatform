@@ -21,7 +21,7 @@ const Navbar = () => {
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <Link to="/" className="flex items-center space-x-2 group">
-                            <span className="text-3xl transform group-hover:scale-110 transition-transform duration-200">🗳️</span>
+                            <img src="/logo.png" alt="BlockVote Logo" className="h-10 w-auto" />
                             <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-indigo-600">
                                 BlockVote
                             </span>
