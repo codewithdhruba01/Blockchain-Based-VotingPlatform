@@ -70,7 +70,7 @@ const Home = () => {
                 </div>
                 <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-primary-50">
                     <div className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full flex items-center justify-center bg-gradient-to-br from-primary-500 to-indigo-600">
-                        <div className="text-white text-9xl opacity-20">🗳️</div>
+                        <img src="/coverlogo.png" alt="BlockVote Logo" className="h-60 w-auto opacity-20 filter invert brightness-0" />
                     </div>
                 </div>
             </div>
